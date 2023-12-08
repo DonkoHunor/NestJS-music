@@ -19,6 +19,7 @@
             <th scope="col">Artist</th>
             <th scope="col">Length</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -27,13 +28,20 @@
             <td><%=s.title%></td>
             <td><%=s.artist%></td>
             <td><%=s.length%></td>
-            <td><button class="btn btn-warning">Delete</button></td>
+            <td>
+                <a href="/modSong/<%=s.id%>" class="btn btn-warning">Modify</a>         
+            </td>
+            <td>
+              <form method="post" action="/deleteSong/<%=s.id%>">
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </td>
           </tr>
           <%})%>
         </tbody>
       </table>
       <div class="col-12">
-        <button class="btn btn-warning"><a href="/newSong" style="color: black;text-decoration: none;">New song</a></button>
+        <a href="/newSong" class="btn btn-success" style="color: white;text-decoration: none;">New song</a>
       </div>
     </div>
 </body>

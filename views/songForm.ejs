@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <title>New song</title>
+</head>
+<body>
+  <dic class="container d-flex justify-content-center">
+    <form method="post" class="row g-3">
+      <h1>New Song</h1>
+      <div class="col-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" class="form-control" name="title" id="title" value="<%=title%>">
+      </div>
+      <div class="col-3">
+        <label for="artist" class="form-label">Artist:</label>
+        <input type="text" class="form-control" name="artist" id="artist" value="<%=artist%>">
+      </div>
+      <div class="col-3">
+        <label for="length" class="form-label">Length(sec):</label>
+        <input type="number" class="form-control" name="length" id="length" value="<%=length%>">
+      </div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-warning center-btn" style="width: 100px;">Add</button>
+      </div>
+      <div class="col-8">
+        <p id="error" class="text-danger"><%=error%></p>
+      </div>
+    </form>
+  </dic>
+</body>
+</html>
